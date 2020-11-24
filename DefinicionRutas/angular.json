@@ -3,9 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "EjemploRouting": {
+    "DefinicionRutas": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/EjemploRouting",
+            "outputPath": "dist/DefinicionRutas",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -46,13 +50,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ]
             }
@@ -61,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "EjemploRouting:build"
+            "browserTarget": "DefinicionRutas:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "EjemploRouting:build:production"
+              "browserTarget": "DefinicionRutas:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "EjemploRouting:build"
+            "browserTarget": "DefinicionRutas:build"
           }
         },
         "test": {
@@ -109,16 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "EjemploRouting:serve"
+            "devServerTarget": "DefinicionRutas:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "EjemploRouting:serve:production"
+              "devServerTarget": "DefinicionRutas:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "EjemploRouting"
+  "defaultProject": "DefinicionRutas"
 }
